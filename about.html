@@ -32,7 +32,7 @@
 
     <div class="about-container">
 
-        <img src="images/joelle_candid.JPG" alt="Profile Picture" class="profile-pic">
+        <img src="images/internship.jpg" alt="Profile Picture" class="profile-pic">
 
         <div class="about-text">
             <h1>Joelle Yoon, B.S. Mechanical Engineering</h1>
@@ -50,94 +50,49 @@
 
     <section class="hobbies">
 
-        <!-- <h2>Hobbies</h2> -->
-
         <div class="hobbies-container">
 
-            <div class="hobby-icons">
+            <h2 class="hobbies-heading">some of the ways I like to fill my spare time!</h2>
 
-                <button class="hobby-btn" data-target="music">
-                    <object data="images/guitar.svg" type="image/svg+xml"></object>
-                </button>
-
-                <button class="hobby-btn" data-target="tennis">
-                    <object data="images/tennis-racket.svg" type="image/svg+xml"></object>
-                </button>
-
-                <button class="hobby-btn" data-target="running">
-                    <object data="images/sneaker.svg" type="image/svg+xml"></object>
-                </button>
-
+            <div class="hobby-gallery">
+                <figure class="hobby-photo">
+                    <img src="images/hobbies/tinydesk2.JPEG" alt="Performing at an HSURV Tiny Desk concert">
+                    <figcaption>organizing & performing at the 2025 HSURV Tiny Desk concert!</figcaption>
+                </figure>
+                <figure class="hobby-photo">
+                    <img src="images/hobbies/csabanquet.JPEG" alt="CSA Banquet performance">
+                    <figcaption>singing a duet at the 2026 CSA Banquet!</figcaption>
+                </figure>
+                <figure class="hobby-photo">
+                    <img src="images/hobbies/tennis1.jpg" alt="Playing tennis at Harvard's Beren Center">
+                    <figcaption>playing tennis at harvard's beren center!</figcaption>
+                </figure>
+                <figure class="hobby-photo">
+                    <img src="images/hobbies/cambridgehalf1.jpg" alt="Cambridge Half Marathon, post-race">
+                    <figcaption>2025 Cambridge Half Marathon!</figcaption>
+                </figure>
+                <figure class="hobby-photo">
+                    <img src="images/hobbies/cambridgehalf2.jpg" alt="Cambridge Half Marathon group photo">
+                    <figcaption>2025 Cambridge Half Marathon - post race with friends :)</figcaption>
+                </figure>
+                <figure class="hobby-photo">
+                    <img src="images/hobbies/singing_2026.JPG" alt="Singing at a friend's birthday party!">
+                    <figcaption>late night karaoke!</figcaption>
+                </figure>
+                <figure class="hobby-photo">
+                    <img src="images/hobbies/aadt_spring_2026.JPG" alt="Harvard AADT Spring 2026 Showcase!">
+                    <figcaption>getting my groove on at Harvard's Spring 2026 AADT Showcase!</figcaption>
+                </figure>
+                <figure class="hobby-photo">
+                    <img src="images/hobbies/maedeup.jpg" alt="Korean traditional knot (maedeup) keychains">
+                    <figcaption>korean knot (maedeup) keychains with mom &lt;3</figcaption>
+                </figure>
+                <figure class="hobby-photo">
+                    <img src="images/hobbies/whimseas_demo.jpg" alt="Cam and follower demo for WHIMSEAS at Harvard Fall 2026 Club Fair!">
+                    <figcaption>cam-and-follower demo for WHIMSEAS for Harvard's 2026 Club Fair!</figcaption>
+                </figure>
             </div>
 
-        
-            <div id="music" class="hobby-section">
-
-                <div class="hobby-content">
-
-                    <div class="hobby-text">
-                        <h3>Music</h3>
-                        <p>
-                            I've been a self-taught guitarist and singer since middle school, 
-                            and music has been both a creative and emotional outlet for me ever since I was young. 
-                            Some of my favorite memories since coming to Harvard have included hosting impromptu 
-                            karaoke sessions with friends, as well as organizing and performing in Tiny Desk concerts.
-
-
-                        </p>
-                    </div>
-
-                    <div class="hobby-gallery">
-                        <img src="images/hobbies/tinydesk2.JPEG" alt="HSURV Tiny Desk">
-                        <img src="images/hobbies/csabanquet.JPEG" alt="CSA Banquet">
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div id="tennis" class="hobby-section">
-
-                <div class="hobby-content">
-
-                    <div class="hobby-text">
-                        <h3>Tennis</h3>
-                        <p>
-                            I have been playing tennis since I was young, and played both singles and doubles on my high school's 
-                            varsity team (Colorado 2024 State Finalists). 
-                            Currently, I play recreationally as a member of Harvard's Competitive Club Tennis team!
-                        </p>
-                    </div>
-
-                    <div class="hobby-gallery">
-                        <img src="images/hobbies/tennis1.jpg" alt="Harvard Beren Center">
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div id="running" class="hobby-section">
-
-                <div class="hobby-content">
-
-                    <div class="hobby-text">
-                        <h3>Running</h3>
-                        <p>
-                            I started my running journey in the summer of 2025, and 
-                            recently ran my first race at the 2025 Cambridge Half Marathon last November!
-                        </p>
-                    </div>
-
-                    <div class="hobby-gallery">
-                        <img src="images/hobbies/cambridgehalf1.jpg" alt="Cambridge Half - Post Race">
-                        <img src="images/hobbies/cambridgehalf2.jpg" alt="Cambridge Half Group Photo!">
-                    </div>
-
-                </div>
-
-            </div>
-            
         </div>
 
     </section>
@@ -150,6 +105,29 @@
     </div>
 
     <script src="js/about.js"></script>
+
+    <script>
+        // Scroll-reveal for hobby gallery photos (fades/slides in as they enter view)
+        document.addEventListener("DOMContentLoaded", function () {
+            var photos = document.querySelectorAll(".hobby-gallery img");
+
+            if (!("IntersectionObserver" in window)) {
+                photos.forEach(function (img) { img.classList.add("in-view"); });
+                return;
+            }
+
+            var observer = new IntersectionObserver(function (entries, obs) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("in-view");
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            photos.forEach(function (img) { observer.observe(img); });
+        });
+    </script>
 
 </body>
 

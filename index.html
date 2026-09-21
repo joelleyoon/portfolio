@@ -77,90 +77,86 @@
     </main> -->
 
     <main class="home-main">
-        <section class="home-carousel" aria-label="Featured projects">
-            <article class="home-slide active" data-project="research">
-                <img src="images/slade lab (summer 25')/side view.JPG"
-                    alt="Shoe-binding ankle exoskeleton research prototype">
-                <div class="home-slide-content">
-                    <p class="home-slide-label">Harvard Slade Lab</p>
-                    <h1>Shoe-Binding Ankle Exoskeleton</h1>
-                    <p>Size-adjustable exoskeleton with non-invasive anchoring interface to assist plantar flexion during walking.</p>
-                    <a class="home-project-button" href="projects.html#research">View project</a>
+
+        <section class="home-intro">
+            <div class="home-hero-photo">
+                <img src="images/IMG_5086.jpg" alt="Joelle Yoon">
+                <div class="home-hero-caption">
+                    <h1>Joelle Yoon</h1>
+                    <p class="home-hero-sub">Mechanical engineer interested in product design and robotics.</p>
                 </div>
-            </article>
-
-            <article class="home-slide" data-project="es51">
-                <img src="images/es51 turf wars/chomp_lifted.jpeg"
-                    alt="The Chomper robot from the Turf Wars competition">
-                <div class="home-slide-content">
-                    <p class="home-slide-label">ES51 Computer-Aided Machine Design</p>
-                    <h1>Turf Wars Competition</h1>
-                    <p>A competition robot with a rotating chomp arm for collecting and storing game pieces.</p>
-                    <a class="home-project-button" href="projects.html#es51">View project</a>
-                </div>
-            </article>
-
-            <article class="home-slide" data-project="es125">
-                <img src="images/es125 egg drop project/egg_drop_CAD isometric.png"
-                    alt="CAD rendering of the egg drop device">
-                <div class="home-slide-content">
-                    <p class="home-slide-label">ES125 Mechanical Systems</p>
-                    <h1>Egg Drop Competition</h1>
-                    <p>A lightweight mass-spring-damper system designed to protect an egg in a vertical drop challenge.</p>
-                    <a class="home-project-button" href="projects.html#es125">View project</a>
-                </div>
-            </article>
-
-            <article class="home-slide" data-project="es120-bridge">
-                <img src="images/es120 bridge/es120_bridge isometric.png"
-                    alt="Isometric CAD rendering of a bridge design">
-                <div class="home-slide-content">
-                    <p class="home-slide-label">ES120 Mechanics of Solids</p>
-                    <h1>Bridge Design Challenge</h1>
-                    <p>A laser-cut deck-truss arch bridge designed for strength while minimizing weight.</p>
-                    <a class="home-project-button" href="projects.html#es120-bridge">View project</a>
-                </div>
-            </article>
-
-            <article class="home-slide" data-project="es50">
-                <img src="images/es50 final project/IMG_3317.jpg"
-                    alt="EchoTap wearable electronics prototype">
-                <div class="home-slide-content">
-                    <p class="home-slide-label">ES50 Final Project</p>
-                    <h1>EchoTap</h1>
-                    <p>A wearable device designed to alert hard-of-hearing users of sounds in their surrounding environment.</p>
-                    <a class="home-project-button" href="projects.html#es50">View project</a>
-                </div>
-            </article>
-
-            <button class="home-carousel-arrow home-carousel-prev"
-                    type="button"
-                    aria-label="Show previous project">
-            &#10094;
-            </button>
-
-            <button class="home-carousel-arrow home-carousel-next"
-                    type="button"
-                    aria-label="Show next project">
-            &#10095;
-            </button>
-
-            <div class="home-carousel-dots" aria-label="Choose a project">
-                <button class="home-dot active" type="button" aria-label="Show exoskeleton project"></button>
-                <button class="home-dot" type="button" aria-label="Show EchoTap project"></button>
-                <button class="home-dot" type="button" aria-label="Show Turf Wars project"></button>
-                <button class="home-dot" type="button" aria-label="Show Egg Drop project"></button>
-                <button class="home-dot" type="button" aria-label="Show bridge project"></button>
             </div>
         </section>
+
+        <section class="home-projects" aria-label="Featured projects">
+
+            <a href="projects.html#research" class="home-project-row">
+                <div class="home-project-image">
+                    <img src="images/slade lab (summer 25')/side view.JPG"
+                        alt="Shoe-binding ankle exoskeleton research prototype">
+                </div>
+                <div class="home-project-text">
+                    <p class="home-project-label">Harvard Slade Lab</p>
+                    <h2>Shoe-Binding Ankle Exoskeleton</h2>
+                    <p>Size-adjustable exoskeleton with non-invasive anchoring interface to assist plantar flexion during walking.</p>
+                    <span class="home-project-link">View project &rarr;</span>
+                </div>
+            </a>
+
+            <a href="projects.html#es51" class="home-project-row">
+                <div class="home-project-image">
+                    <img src="images/es51 turf wars/chomp_lifted.jpeg"
+                        alt="The Chomper robot from the Turf Wars competition">
+                </div>
+                <div class="home-project-text">
+                    <p class="home-project-label">ES51 Computer-Aided Machine Design</p>
+                    <h2>Turf Wars Competition</h2>
+                    <p>A competition robot with a rotating chomp arm for collecting and storing game pieces.</p>
+                    <span class="home-project-link">View project &rarr;</span>
+                </div>
+            </a>
+
+            <a href="projects.html#es125" class="home-project-row">
+                <div class="home-project-image">
+                    <img src="images/es125 egg drop project/egg_drop_CAD isometric.png"
+                        alt="CAD rendering of the egg drop device">
+                </div>
+                <div class="home-project-text">
+                    <p class="home-project-label">ES125 Mechanical Systems</p>
+                    <h2>Egg Drop Competition</h2>
+                    <p>A lightweight mass-spring-damper system designed to protect an egg in a vertical drop challenge.</p>
+                    <span class="home-project-link">View project &rarr;</span>
+                </div>
+            </a>
+
+            <a href="projects.html#es120-bridge" class="home-project-row">
+                <div class="home-project-image">
+                    <img src="images/es120 bridge/es120_bridge isometric.png"
+                        alt="Isometric CAD rendering of a bridge design">
+                </div>
+                <div class="home-project-text">
+                    <p class="home-project-label">ES120 Mechanics of Solids</p>
+                    <h2>Bridge Design Challenge</h2>
+                    <p>A laser-cut deck-truss arch bridge designed for strength while minimizing weight.</p>
+                    <span class="home-project-link">View project &rarr;</span>
+                </div>
+            </a>
+
+            <a href="projects.html#es50" class="home-project-row">
+                <div class="home-project-image">
+                    <img src="images/es50 final project/IMG_3317.jpg"
+                        alt="EchoTap wearable electronics prototype">
+                </div>
+                <div class="home-project-text">
+                    <p class="home-project-label">ES50 Final Project</p>
+                    <h2>EchoTap</h2>
+                    <p>A wearable device designed to alert hard-of-hearing users of sounds in their surrounding environment.</p>
+                    <span class="home-project-link">View project &rarr;</span>
+                </div>
+            </a>
+
+        </section>
     </main>
-
-
-
-
-
-    <script src="js/home.js"></script>
-
 
 </body>
 
